@@ -957,24 +957,6 @@ by exp-project-lbr.ulp</description>
 <wire x1="-8.89" y1="-23.495" x2="-8.89" y2="-24.765" width="0.2032" layer="21"/>
 <text x="6.58235" y="-22.63775" size="0.8128" layer="21" font="vector" ratio="15">GND</text>
 </package>
-<package name="SJ">
-<wire x1="1.397" y1="-1.016" x2="-1.397" y2="-1.016" width="0.1524" layer="21"/>
-<wire x1="1.397" y1="1.016" x2="1.651" y2="0.762" width="0.1524" layer="21" curve="-90"/>
-<wire x1="-1.651" y1="0.762" x2="-1.397" y2="1.016" width="0.1524" layer="21" curve="-90"/>
-<wire x1="-1.651" y1="-0.762" x2="-1.397" y2="-1.016" width="0.1524" layer="21" curve="90"/>
-<wire x1="1.397" y1="-1.016" x2="1.651" y2="-0.762" width="0.1524" layer="21" curve="90"/>
-<wire x1="1.651" y1="-0.762" x2="1.651" y2="0.762" width="0.1524" layer="21"/>
-<wire x1="-1.651" y1="-0.762" x2="-1.651" y2="0.762" width="0.1524" layer="21"/>
-<wire x1="-1.397" y1="1.016" x2="1.397" y2="1.016" width="0.1524" layer="21"/>
-<wire x1="1.016" y1="0" x2="1.524" y2="0" width="0.1524" layer="51"/>
-<wire x1="-1.016" y1="0" x2="-1.524" y2="0" width="0.1524" layer="51"/>
-<wire x1="-0.254" y1="-0.127" x2="-0.254" y2="0.127" width="1.27" layer="51" curve="-180" cap="flat"/>
-<wire x1="0.254" y1="0.127" x2="0.254" y2="-0.127" width="1.27" layer="51" curve="-180" cap="flat"/>
-<smd name="1" x="-0.762" y="0" dx="1.1684" dy="1.6002" layer="1"/>
-<smd name="2" x="0.762" y="0" dx="1.1684" dy="1.6002" layer="1"/>
-<text x="-1.651" y="1.143" size="1.27" layer="25" ratio="10">&gt;NAME</text>
-<rectangle x1="-0.0762" y1="-0.9144" x2="0.0762" y2="0.9144" layer="29"/>
-</package>
 </packages>
 <symbols>
 <symbol name="GND">
@@ -1077,16 +1059,6 @@ Shield Footprint</text>
 <pin name="+5V@0" x="17.78" y="27.94" visible="pin" length="short" rot="R180"/>
 <pin name="MISO" x="17.78" y="30.48" visible="pin" length="short" rot="R180"/>
 </symbol>
-<symbol name="SJ">
-<wire x1="0.381" y1="0.635" x2="0.381" y2="-0.635" width="1.27" layer="94" curve="-180" cap="flat"/>
-<wire x1="-0.381" y1="-0.635" x2="-0.381" y2="0.635" width="1.27" layer="94" curve="-180" cap="flat"/>
-<wire x1="2.54" y1="0" x2="1.651" y2="0" width="0.1524" layer="94"/>
-<wire x1="-2.54" y1="0" x2="-1.651" y2="0" width="0.1524" layer="94"/>
-<text x="-2.54" y="2.54" size="1.778" layer="95">&gt;NAME</text>
-<text x="-2.54" y="-3.81" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="2" x="2.54" y="0" visible="off" length="point" direction="pas" swaplevel="1" rot="R180"/>
-<pin name="1" x="-2.54" y="0" visible="off" length="point" direction="pas" swaplevel="1"/>
-</symbol>
 </symbols>
 <devicesets>
 <deviceset name="GND">
@@ -1177,24 +1149,6 @@ Shield Footprint</text>
 <connect gate="G$1" pin="SCL" pad="SCL"/>
 <connect gate="G$1" pin="SDA" pad="SDA"/>
 <connect gate="G$1" pin="VIN" pad="VIN"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="SJ" prefix="J">
-<description>PCB "solder jumper".
-Note that there should nothing on the BOM corresponding to this "component".</description>
-<gates>
-<gate name="G$1" symbol="SJ" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="SJ">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -3893,6 +3847,89 @@ Button commonly used for reset or general input. Spark Fun Electronics SKU : COM
 </deviceset>
 </devicesets>
 </library>
+<library name="freetronics-jon">
+<packages>
+<package name="SJC">
+<wire x1="1.397" y1="-1.016" x2="-1.397" y2="-1.016" width="0.1524" layer="21"/>
+<wire x1="1.397" y1="1.016" x2="1.651" y2="0.762" width="0.1524" layer="21" curve="-90"/>
+<wire x1="-1.651" y1="0.762" x2="-1.397" y2="1.016" width="0.1524" layer="21" curve="-90"/>
+<wire x1="-1.651" y1="-0.762" x2="-1.397" y2="-1.016" width="0.1524" layer="21" curve="90"/>
+<wire x1="1.397" y1="-1.016" x2="1.651" y2="-0.762" width="0.1524" layer="21" curve="90"/>
+<wire x1="1.651" y1="-0.762" x2="1.651" y2="0.762" width="0.1524" layer="21"/>
+<wire x1="-1.651" y1="-0.762" x2="-1.651" y2="0.762" width="0.1524" layer="21"/>
+<wire x1="-1.397" y1="1.016" x2="1.397" y2="1.016" width="0.1524" layer="21"/>
+<wire x1="1.016" y1="0" x2="1.524" y2="0" width="0.1524" layer="51"/>
+<wire x1="-1.016" y1="0" x2="-1.524" y2="0" width="0.1524" layer="51"/>
+<wire x1="-0.254" y1="-0.127" x2="-0.254" y2="0.127" width="1.27" layer="51" curve="-180" cap="flat"/>
+<wire x1="0.254" y1="0.127" x2="0.254" y2="-0.127" width="1.27" layer="51" curve="-180" cap="flat"/>
+<smd name="1" x="-0.762" y="0" dx="1.1684" dy="1.6002" layer="1"/>
+<smd name="2" x="0.762" y="0" dx="1.1684" dy="1.6002" layer="1"/>
+<text x="-1.651" y="1.143" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="0.4001" y="0" size="0.02" layer="27">&gt;VALUE</text>
+<rectangle x1="-0.0762" y1="-0.9144" x2="0.0762" y2="0.9144" layer="29"/>
+<wire x1="-0.508" y1="0" x2="0.508" y2="0" width="0.4064" layer="1"/>
+<wire x1="-0.508" y1="0" x2="0.508" y2="0" width="0.3048" layer="51"/>
+</package>
+<package name="0402SJC">
+<wire x1="-0.92" y1="0.46" x2="0.92" y2="0.46" width="0.0508" layer="39"/>
+<wire x1="0.92" y1="0.46" x2="0.92" y2="-0.46" width="0.0508" layer="39"/>
+<wire x1="0.92" y1="-0.46" x2="-0.92" y2="-0.46" width="0.0508" layer="39"/>
+<wire x1="-0.92" y1="-0.46" x2="-0.92" y2="0.46" width="0.0508" layer="39"/>
+<smd name="1" x="-0.48" y="0" dx="0.571" dy="0.62" layer="1"/>
+<smd name="2" x="0.48" y="0" dx="0.571" dy="0.62" layer="1"/>
+<text x="-0.889" y="0.508" size="0.4064" layer="25" font="vector">&gt;NAME</text>
+<text x="-1.016" y="-0.9652" size="0.4064" layer="27" font="vector">&gt;VALUE</text>
+<rectangle x1="-0.1999" y1="-0.3" x2="0.1999" y2="0.3" layer="35"/>
+<rectangle x1="-0.1999" y1="-0.3" x2="0.1999" y2="0.3" layer="35" rot="R180"/>
+<wire x1="0.254" y1="0.127" x2="0.254" y2="-0.127" width="0.4064" layer="51" curve="-180" cap="flat"/>
+<wire x1="-0.254" y1="-0.127" x2="-0.254" y2="0.127" width="0.4064" layer="51" curve="-180" cap="flat"/>
+<wire x1="-0.508" y1="0" x2="-0.762" y2="0" width="0.127" layer="51"/>
+<wire x1="0.508" y1="0" x2="0.762" y2="0" width="0.127" layer="51"/>
+<wire x1="-0.254" y1="0" x2="0.254" y2="0" width="0.2032" layer="1"/>
+<wire x1="-0.254" y1="0" x2="0.254" y2="0" width="0.127" layer="51"/>
+</package>
+</packages>
+<symbols>
+<symbol name="SJC">
+<wire x1="0.381" y1="0.635" x2="0.381" y2="-0.635" width="1.27" layer="94" curve="-180" cap="flat"/>
+<wire x1="-0.381" y1="-0.635" x2="-0.381" y2="0.635" width="1.27" layer="94" curve="-180" cap="flat"/>
+<wire x1="2.54" y1="0" x2="1.651" y2="0" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="0" x2="-1.651" y2="0" width="0.1524" layer="94"/>
+<text x="-2.54" y="2.54" size="1.778" layer="95">&gt;NAME</text>
+<text x="-2.54" y="-3.81" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="2" x="5.08" y="0" visible="pad" length="short" direction="pas" swaplevel="1" rot="R180"/>
+<pin name="1" x="-5.08" y="0" visible="pad" length="short" direction="pas" swaplevel="1"/>
+<wire x1="-1.27" y1="0" x2="1.27" y2="0" width="0.4064" layer="94"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="SJC">
+<gates>
+<gate name="G$1" symbol="SJC" x="0" y="0"/>
+</gates>
+<devices>
+<device name="0402" package="0402SJC">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="N" package="SJC">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -3912,21 +3949,21 @@ Button commonly used for reset or general input. Spark Fun Electronics SKU : COM
 <attribute name="PACKAGE" value="SOT23-3"/>
 </part>
 <part name="P+2" library="supply1" deviceset="+5V" device=""/>
-<part name="R4" library="freetronics-master-v1" deviceset="RESISTOR" device="0603" value="22kΩ 1%">
+<part name="R4" library="freetronics-master-v1" deviceset="RESISTOR" device="0603" value="22K 1% 0603">
 <attribute name="PACKAGE" value="0603"/>
 </part>
 <part name="Q1" library="freetronics-luke" deviceset="2N7002" device="" value="2N7002">
 <attribute name="PACKAGE" value="SOT-23"/>
 </part>
-<part name="C12" library="freetronics-master-v1" deviceset="CAP" device="0603" value="100nF">
+<part name="C12" library="freetronics-master-v1" deviceset="CAP" device="0603" value="100nF 0603">
 <attribute name="PACKAGE" value="0603"/>
 </part>
-<part name="LED2" library="freetronics-master-v1" deviceset="LED" device="0603" value="Power">
+<part name="LED2" library="freetronics-master-v1" deviceset="LED" device="0603" value="Power 0603 BLUE">
 <attribute name="COLOUR" value="Blue"/>
 <attribute name="PACKAGE" value="0603"/>
 </part>
 <part name="ANT1" library="adafruit" deviceset="ANTENNA" device=""/>
-<part name="C1" library="freetronics-master-v1" deviceset="CAP" device="0402" value="1.8pF">
+<part name="C1" library="freetronics-master-v1" deviceset="CAP" device="0402" value="1.8pF 0402">
 <attribute name="PACKAGE" value="0402"/>
 </part>
 <part name="+3V5" library="supply1" deviceset="+3V3" device="" value="+3.0V"/>
@@ -3936,23 +3973,23 @@ Button commonly used for reset or general input. Spark Fun Electronics SKU : COM
 <part name="+3V1" library="supply1" deviceset="+3V3" device="" value="+3.0V"/>
 <part name="+3V2" library="supply1" deviceset="+3V3" device="" value="+3.0V"/>
 <part name="+3V3" library="supply1" deviceset="+3V3" device="" value="+3.0V"/>
-<part name="C13" library="freetronics-master-v1" deviceset="CAP" device="0603" value="33nF">
+<part name="C13" library="freetronics-master-v1" deviceset="CAP" device="0603" value="33nF 0603">
 <attribute name="PACKAGE" value="0603"/>
 </part>
 <part name="U$4" library="freetronics-luke" deviceset="GND" device=""/>
-<part name="Q2" library="freetronics-master-v1" deviceset="CRYSTAL" device="HC49UV" value="16 MHz">
+<part name="Q2" library="freetronics-master-v1" deviceset="CRYSTAL" device="HC49UV" value="16MHz HC49US">
 <attribute name="CAPACITANCE" value="18pF"/>
 <attribute name="ID" value="ATS16B"/>
 <attribute name="PACKAGE" value="HC49US"/>
 </part>
-<part name="C6" library="freetronics-master-v1" deviceset="CAP" device="0603" value="27pF">
+<part name="C6" library="freetronics-master-v1" deviceset="CAP" device="0603" value="27pF 0603">
 <attribute name="PACKAGE" value="0603"/>
 </part>
-<part name="C7" library="freetronics-master-v1" deviceset="CAP" device="0603" value="27pF">
+<part name="C7" library="freetronics-master-v1" deviceset="CAP" device="0603" value="27pF 0603">
 <attribute name="PACKAGE" value="0603"/>
 </part>
 <part name="U$6" library="freetronics-luke" deviceset="GND" device=""/>
-<part name="C11" library="freetronics-master-v1" deviceset="CAP" device="0603" value="100nF">
+<part name="C11" library="freetronics-master-v1" deviceset="CAP" device="0603" value="100nF 0603">
 <attribute name="PACKAGE" value="0603"/>
 </part>
 <part name="U$5" library="freetronics-luke" deviceset="GND" device=""/>
@@ -3960,38 +3997,38 @@ Button commonly used for reset or general input. Spark Fun Electronics SKU : COM
 <attribute name="CAPACITANCE" value="12.5pF"/>
 <attribute name="ID" value="AB26T-32.768KHZ"/>
 </part>
-<part name="C14" library="freetronics-master-v1" deviceset="CAP" device="0603" value="18pF">
+<part name="C14" library="freetronics-master-v1" deviceset="CAP" device="0603" value="18pF 0603">
 <attribute name="PACKAGE" value="0603"/>
 </part>
-<part name="C15" library="freetronics-master-v1" deviceset="CAP" device="0603" value="18pF">
+<part name="C15" library="freetronics-master-v1" deviceset="CAP" device="0603" value="18pF 0603">
 <attribute name="PACKAGE" value="0603"/>
 </part>
 <part name="U$7" library="freetronics-luke" deviceset="GND" device=""/>
 <part name="U$10" library="freetronics-luke" deviceset="GND" device=""/>
-<part name="C5" library="freetronics-master-v1" deviceset="CAP" device="0603" value="1nF">
+<part name="C5" library="freetronics-master-v1" deviceset="CAP" device="0603" value="1nF 0603">
 <attribute name="PACKAGE" value="0603"/>
 </part>
 <part name="U$11" library="freetronics-luke" deviceset="GND" device=""/>
-<part name="C8" library="freetronics-master-v1" deviceset="CAP" device="0603" value="100nF">
+<part name="C8" library="freetronics-master-v1" deviceset="CAP" device="0603" value="100nF 0603">
 <attribute name="PACKAGE" value="0603"/>
 </part>
 <part name="U$12" library="freetronics-luke" deviceset="GND" device=""/>
-<part name="L1" library="freetronics-master-v1" deviceset="INDUCTOR" device="0402" value="3.9nH">
+<part name="L1" library="freetronics-master-v1" deviceset="INDUCTOR" device="0402" value="3.9nH 0402">
 <attribute name="PACKAGE" value="0402"/>
 </part>
-<part name="L2" library="freetronics-master-v1" deviceset="INDUCTOR" device="0402" value="8.2nH">
+<part name="L2" library="freetronics-master-v1" deviceset="INDUCTOR" device="0402" value="8.2nH 0402">
 <attribute name="PACKAGE" value="0402"/>
 </part>
-<part name="L3" library="freetronics-master-v1" deviceset="INDUCTOR" device="0402" value="5.6nH">
+<part name="L3" library="freetronics-master-v1" deviceset="INDUCTOR" device="0402" value="5.6nH 0402">
 <attribute name="PACKAGE" value="0402"/>
 </part>
-<part name="C2" library="freetronics-master-v1" deviceset="CAP" device="0402" value="1.2pF">
+<part name="C2" library="freetronics-master-v1" deviceset="CAP" device="0402" value="1.2pF 0402">
 <attribute name="PACKAGE" value="0402"/>
 </part>
 <part name="C3" library="freetronics-master-v1" deviceset="CAP" device="0402" value="NP">
 <attribute name="PACKAGE" value="0402"/>
 </part>
-<part name="C4" library="freetronics-master-v1" deviceset="CAP" device="0402" value="2.2nF">
+<part name="C4" library="freetronics-master-v1" deviceset="CAP" device="0402" value="2.2nF 0402">
 <attribute name="PACKAGE" value="0402"/>
 </part>
 <part name="+3V4" library="supply1" deviceset="+3V3" device="" value="+3.0V"/>
@@ -4000,38 +4037,38 @@ Button commonly used for reset or general input. Spark Fun Electronics SKU : COM
 <part name="U$15" library="freetronics-luke" deviceset="GND" device=""/>
 <part name="U$16" library="freetronics-luke" deviceset="GND" device=""/>
 <part name="U$17" library="freetronics-luke" deviceset="GND" device=""/>
-<part name="J8" library="freetronics-master-v1" deviceset="M02" device="PTH" value="Debug/Test UART"/>
+<part name="J7" library="freetronics-master-v1" deviceset="M02" device="PTH" value="Debug/Test UART"/>
 <part name="IC2" library="40xx" deviceset="4050" device="D" value="HEF4050BT">
 <attribute name="PACKAGE" value="16-SOIC"/>
 </part>
-<part name="C9" library="freetronics-master-v1" deviceset="CAP" device="0603" value="1µF">
+<part name="C9" library="freetronics-master-v1" deviceset="CAP" device="0603" value="1uF 0603">
 <attribute name="PACKAGE" value="0603"/>
 </part>
-<part name="C10" library="freetronics-master-v1" deviceset="CAP" device="0603" value="1µF">
+<part name="C10" library="freetronics-master-v1" deviceset="CAP" device="0603" value="1uF 0603">
 <attribute name="PACKAGE" value="0603"/>
 </part>
 <part name="U$9" library="freetronics-luke" deviceset="GND" device=""/>
 <part name="U$18" library="freetronics-luke" deviceset="GND" device=""/>
 <part name="U$19" library="freetronics-luke" deviceset="GND" device=""/>
-<part name="R5" library="freetronics-master-v1" deviceset="RESISTOR" device="0603" value="1kΩ">
+<part name="R5" library="freetronics-master-v1" deviceset="RESISTOR" device="0603" value="1K 0603">
 <attribute name="PACKAGE" value="0603"/>
 </part>
 <part name="U$20" library="freetronics-luke" deviceset="GND" device=""/>
-<part name="R3" library="freetronics-master-v1" deviceset="RESISTOR" device="0603" value="10kΩ">
+<part name="R3" library="freetronics-master-v1" deviceset="RESISTOR" device="0603" value="10K 0603">
 <attribute name="PACKAGE" value="0603"/>
 </part>
 <part name="+3V6" library="supply1" deviceset="+3V3" device="" value="+3.0V"/>
-<part name="LED1" library="freetronics-master-v1" deviceset="LED" device="0603" value="Activity">
+<part name="LED1" library="freetronics-master-v1" deviceset="LED" device="0603" value="Activity 0603 GREEN">
 <attribute name="COLOUR" value="Green"/>
 <attribute name="PACKAGE" value="0603"/>
 </part>
 <part name="U$21" library="freetronics-luke" deviceset="GND" device=""/>
-<part name="R2" library="freetronics-master-v1" deviceset="RESISTOR" device="0603" value="100kΩ">
+<part name="R2" library="freetronics-master-v1" deviceset="RESISTOR" device="0603" value="100K 0603">
 <attribute name="PACKAGE" value="0603"/>
 </part>
 <part name="U$22" library="freetronics-luke" deviceset="GND" device=""/>
 <part name="+3V7" library="supply1" deviceset="+3V3" device="" value="+3.0V"/>
-<part name="R1" library="freetronics-master-v1" deviceset="RESISTOR" device="0603" value="1kΩ">
+<part name="R1" library="freetronics-master-v1" deviceset="RESISTOR" device="0603" value="1K 0603">
 <attribute name="PACKAGE" value="0603"/>
 </part>
 <part name="J3" library="freetronics-luke" deviceset="ARDUINO-SHIELD_R3" device=""/>
@@ -4045,22 +4082,14 @@ Button commonly used for reset or general input. Spark Fun Electronics SKU : COM
 <part name="U$39" library="freetronics-luke" deviceset="+5V" device=""/>
 <part name="S1" library="freetronics" deviceset="TAC_SWITCH" device="SMD" value="Reset"/>
 <part name="U$45" library="freetronics-luke" deviceset="+5V" device=""/>
-<part name="J7" library="freetronics-luke" deviceset="SJ" device=""/>
-<part name="J10" library="freetronics-luke" deviceset="SJ" device=""/>
-<part name="J9" library="freetronics-luke" deviceset="SJ" device=""/>
-<part name="J11" library="freetronics-luke" deviceset="SJ" device=""/>
-<part name="J12" library="freetronics-luke" deviceset="SJ" device=""/>
+<part name="J8" library="freetronics-jon" deviceset="SJC" device="N"/>
+<part name="J9" library="freetronics-jon" deviceset="SJC" device="N"/>
 </parts>
 <sheets>
 <sheet>
 <plain>
-<text x="147.32" y="12.7" size="3.048" layer="94">Bluetooth Low Energy Arduino Shield</text>
-<text x="147.32" y="6.858" size="1.778" layer="94">Version 0.5</text>
-<text x="169.926" y="6.858" size="1.778" layer="94">http://freetronics.com/BLEShield</text>
+<text x="154.94" y="12.7" size="3.048" layer="94">Bluetooth Low Energy (BLE) Shield</text>
 <frame x1="0" y1="0" x2="248.92" y2="185.42" columns="8" rows="5" layer="94"/>
-<frame x1="144.78" y1="5.08" x2="243.84" y2="17.78" columns="0" rows="0" layer="94" border-left="no" border-top="no" border-right="no" border-bottom="no"/>
-<frame x1="144.78" y1="5.08" x2="165.862" y2="10.16" columns="8" rows="5" layer="94"/>
-<frame x1="220.98" y1="5.08" x2="243.84" y2="10.16" columns="8" rows="5" layer="94"/>
 <text x="55.88" y="162.56" size="1.27" layer="98">Meandered inverted-F
 antenna; 50Ω 2.4 GHz</text>
 <wire x1="7.62" y1="111.76" x2="111.76" y2="111.76" width="0.1524" layer="98" style="shortdash"/>
@@ -4081,11 +4110,22 @@ antenna; 50Ω 2.4 GHz</text>
 <wire x1="175.26" y1="22.86" x2="175.26" y2="66.04" width="0.1524" layer="98" style="shortdash"/>
 <text x="205.74" y="175.26" size="1.27" layer="98">SPI lines connected to 6-pin ISP
 header for Leonardo compatibility.</text>
+<text x="215.9" y="6.858" size="1.778" layer="94">V1.0 (2014-01-21)</text>
+<text x="154.686" y="6.858" size="1.651" layer="94">www.freetronics.com/bles</text>
+<text x="195.58" y="6.858" size="1.778" layer="94">SKU: BLES</text>
+<frame x1="149.86" y1="5.08" x2="243.84" y2="17.78" columns="0" rows="0" layer="94" border-left="no" border-top="no" border-right="no" border-bottom="no"/>
+<frame x1="190.5" y1="5.08" x2="213.36" y2="10.16" columns="8" rows="5" layer="94"/>
+<frame x1="213.36" y1="5.08" x2="243.84" y2="10.16" columns="8" rows="5" layer="94"/>
+<text x="114.3" y="7.62" size="1.27" layer="94">Copyright 2014 Freetronics P/L
+Designed by Luke Weston
+Released under the TAPR Open
+Hardware License
+www.tapr.org/OHL</text>
 </plain>
 <instances>
 <instance part="IC1" gate="G$1" x="71.12" y="76.2" smashed="yes" rot="R90">
-<attribute name="NAME" x="45.72" y="91.44" size="1.27" layer="95"/>
-<attribute name="VALUE2" x="45.72" y="88.9" size="1.27" layer="96"/>
+<attribute name="NAME" x="60.96" y="66.04" size="1.27" layer="95"/>
+<attribute name="VALUE2" x="60.96" y="63.5" size="1.27" layer="96"/>
 </instance>
 <instance part="IC3" gate="G$1" x="195.58" y="50.8" smashed="yes">
 <attribute name="NAME" x="187.96" y="60.96" size="1.27" layer="95"/>
@@ -4096,9 +4136,8 @@ header for Leonardo compatibility.</text>
 <attribute name="VALUE" x="177.8" y="55.88" size="1.27" layer="96"/>
 </instance>
 <instance part="R4" gate="G$1" x="27.94" y="76.2" smashed="yes" rot="MR0">
-<attribute name="NAME" x="22.86" y="83.82" size="1.27" layer="95"/>
-<attribute name="VALUE" x="22.86" y="81.28" size="1.27" layer="96"/>
-<attribute name="PACKAGE" x="22.86" y="78.74" size="1.27" layer="96"/>
+<attribute name="NAME" x="20.32" y="81.28" size="1.27" layer="95"/>
+<attribute name="VALUE" x="17.78" y="78.74" size="1.27" layer="96"/>
 </instance>
 <instance part="Q1" gate="G$1" x="114.3" y="139.7" smashed="yes">
 <attribute name="NAME" x="119.38" y="142.24" size="1.27" layer="95"/>
@@ -4106,21 +4145,17 @@ header for Leonardo compatibility.</text>
 <attribute name="PACKAGE" x="119.38" y="137.16" size="1.27" layer="96"/>
 </instance>
 <instance part="C12" gate="G$1" x="50.8" y="25.4" smashed="yes" rot="R180">
-<attribute name="NAME" x="40.64" y="25.4" size="1.27" layer="95"/>
-<attribute name="VALUE" x="40.64" y="22.86" size="1.27" layer="96"/>
-<attribute name="PACKAGE" x="40.64" y="20.32" size="1.27" layer="96"/>
+<attribute name="NAME" x="43.18" y="22.86" size="1.27" layer="95"/>
+<attribute name="VALUE" x="40.64" y="20.32" size="1.27" layer="96"/>
 </instance>
 <instance part="LED2" gate="G$1" x="231.14" y="38.1" smashed="yes">
 <attribute name="NAME" x="233.68" y="40.64" size="1.27" layer="95"/>
 <attribute name="VALUE" x="233.68" y="38.1" size="1.27" layer="96"/>
-<attribute name="COLOUR" x="233.68" y="35.56" size="1.27" layer="96"/>
-<attribute name="PACKAGE" x="233.68" y="33.02" size="1.27" layer="96"/>
 </instance>
 <instance part="ANT1" gate="G$1" x="78.74" y="157.48" rot="R270"/>
 <instance part="C1" gate="G$1" x="45.72" y="157.48" smashed="yes" rot="MR90">
-<attribute name="NAME" x="43.18" y="152.4" size="1.27" layer="95"/>
-<attribute name="VALUE" x="43.18" y="149.86" size="1.27" layer="96"/>
-<attribute name="PACKAGE" x="43.18" y="147.32" size="1.27" layer="96"/>
+<attribute name="NAME" x="43.18" y="162.56" size="1.27" layer="95"/>
+<attribute name="VALUE" x="40.64" y="160.02" size="1.27" layer="96"/>
 </instance>
 <instance part="+3V5" gate="G$1" x="33.02" y="45.72" smashed="yes">
 <attribute name="VALUE" x="25.4" y="43.18" size="1.27" layer="96"/>
@@ -4138,9 +4173,8 @@ header for Leonardo compatibility.</text>
 <attribute name="VALUE" x="50.8" y="96.52" size="1.27" layer="96"/>
 </instance>
 <instance part="C13" gate="G$1" x="63.5" y="25.4" smashed="yes" rot="R180">
-<attribute name="NAME" x="55.88" y="25.4" size="1.27" layer="95"/>
-<attribute name="VALUE" x="55.88" y="22.86" size="1.27" layer="96"/>
-<attribute name="PACKAGE" x="55.88" y="20.32" size="1.27" layer="96"/>
+<attribute name="NAME" x="55.88" y="22.86" size="1.27" layer="95"/>
+<attribute name="VALUE" x="55.88" y="20.32" size="1.27" layer="96"/>
 </instance>
 <instance part="U$4" gate="G$1" x="63.5" y="12.7"/>
 <instance part="Q2" gate="G$1" x="33.02" y="66.04" smashed="yes" rot="R90">
@@ -4148,23 +4182,19 @@ header for Leonardo compatibility.</text>
 <attribute name="VALUE" x="30.48" y="55.88" size="1.27" layer="96"/>
 <attribute name="ID" x="30.48" y="50.8" size="1.27" layer="96"/>
 <attribute name="CAPACITANCE" x="30.48" y="53.34" size="1.27" layer="96"/>
-<attribute name="PACKAGE" x="30.48" y="48.26" size="1.27" layer="96"/>
 </instance>
 <instance part="C6" gate="G$1" x="27.94" y="71.12" smashed="yes" rot="R90">
-<attribute name="NAME" x="12.7" y="73.66" size="1.27" layer="95"/>
-<attribute name="VALUE" x="12.7" y="71.12" size="1.27" layer="96"/>
-<attribute name="PACKAGE" x="12.7" y="68.58" size="1.27" layer="96"/>
+<attribute name="NAME" x="22.86" y="73.66" size="1.27" layer="95"/>
+<attribute name="VALUE" x="15.24" y="68.58" size="1.27" layer="96"/>
 </instance>
 <instance part="C7" gate="G$1" x="27.94" y="60.96" smashed="yes" rot="R90">
-<attribute name="NAME" x="12.7" y="63.5" size="1.27" layer="95"/>
-<attribute name="VALUE" x="12.7" y="60.96" size="1.27" layer="96"/>
-<attribute name="PACKAGE" x="12.7" y="58.42" size="1.27" layer="96"/>
+<attribute name="NAME" x="22.86" y="63.5" size="1.27" layer="95"/>
+<attribute name="VALUE" x="15.24" y="58.42" size="1.27" layer="96"/>
 </instance>
 <instance part="U$6" gate="G$1" x="20.32" y="55.88"/>
 <instance part="C11" gate="G$1" x="33.02" y="35.56" smashed="yes" rot="R180">
-<attribute name="NAME" x="22.86" y="35.56" size="1.27" layer="95"/>
-<attribute name="VALUE" x="22.86" y="33.02" size="1.27" layer="96"/>
-<attribute name="PACKAGE" x="22.86" y="30.48" size="1.27" layer="96"/>
+<attribute name="NAME" x="25.4" y="33.02" size="1.27" layer="95"/>
+<attribute name="VALUE" x="22.86" y="30.48" size="1.27" layer="96"/>
 </instance>
 <instance part="U$5" gate="G$1" x="33.02" y="25.4"/>
 <instance part="Q3" gate="G$1" x="76.2" y="27.94" smashed="yes">
@@ -4174,58 +4204,48 @@ header for Leonardo compatibility.</text>
 <attribute name="VALUE" x="86.36" y="30.48" size="1.27" layer="96"/>
 </instance>
 <instance part="C14" gate="G$1" x="71.12" y="22.86" smashed="yes" rot="R180">
-<attribute name="NAME" x="76.2" y="22.86" size="1.27" layer="95"/>
-<attribute name="VALUE" x="76.2" y="20.32" size="1.27" layer="96"/>
-<attribute name="PACKAGE" x="76.2" y="17.78" size="1.27" layer="96"/>
+<attribute name="NAME" x="71.12" y="22.86" size="1.27" layer="95"/>
+<attribute name="VALUE" x="68.58" y="17.78" size="1.27" layer="96"/>
 </instance>
 <instance part="C15" gate="G$1" x="83.82" y="22.86" smashed="yes" rot="R180">
-<attribute name="NAME" x="88.9" y="20.32" size="1.27" layer="95"/>
-<attribute name="VALUE" x="88.9" y="17.78" size="1.27" layer="96"/>
-<attribute name="PACKAGE" x="88.9" y="15.24" size="1.27" layer="96"/>
+<attribute name="NAME" x="86.36" y="20.32" size="1.27" layer="95"/>
+<attribute name="VALUE" x="86.36" y="17.78" size="1.27" layer="96"/>
 </instance>
 <instance part="U$7" gate="G$1" x="71.12" y="12.7"/>
 <instance part="U$10" gate="G$1" x="83.82" y="12.7"/>
 <instance part="C5" gate="G$1" x="35.56" y="91.44" smashed="yes" rot="R180">
 <attribute name="NAME" x="27.94" y="93.98" size="1.27" layer="95"/>
-<attribute name="VALUE" x="27.94" y="91.44" size="1.27" layer="96"/>
-<attribute name="PACKAGE" x="27.94" y="88.9" size="1.27" layer="96"/>
+<attribute name="VALUE" x="25.4" y="91.44" size="1.27" layer="96"/>
 </instance>
 <instance part="U$11" gate="G$1" x="35.56" y="81.28"/>
 <instance part="C8" gate="G$1" x="93.98" y="53.34" smashed="yes" rot="R180">
-<attribute name="NAME" x="99.06" y="53.34" size="1.27" layer="95"/>
-<attribute name="VALUE" x="99.06" y="50.8" size="1.27" layer="96"/>
-<attribute name="PACKAGE" x="99.06" y="48.26" size="1.27" layer="96"/>
+<attribute name="NAME" x="96.52" y="53.34" size="1.27" layer="95"/>
+<attribute name="VALUE" x="96.52" y="50.8" size="1.27" layer="96"/>
 </instance>
 <instance part="U$12" gate="G$1" x="93.98" y="43.18"/>
 <instance part="L1" gate="G$1" x="33.02" y="157.48" smashed="yes" rot="MR90">
-<attribute name="NAME" x="33.02" y="152.4" size="1.27" layer="95"/>
-<attribute name="VALUE" x="33.02" y="149.86" size="1.27" layer="96"/>
-<attribute name="PACKAGE" x="33.02" y="147.32" size="1.27" layer="96"/>
+<attribute name="NAME" x="27.94" y="160.02" size="1.27" layer="95"/>
+<attribute name="VALUE" x="27.94" y="154.94" size="1.27" layer="96"/>
 </instance>
 <instance part="L2" gate="G$1" x="22.86" y="147.32" smashed="yes" rot="MR0">
 <attribute name="NAME" x="25.4" y="147.32" size="1.27" layer="95"/>
 <attribute name="VALUE" x="25.4" y="144.78" size="1.27" layer="96"/>
-<attribute name="PACKAGE" x="25.4" y="142.24" size="1.27" layer="96"/>
 </instance>
 <instance part="L3" gate="G$1" x="33.02" y="137.16" smashed="yes" rot="R90">
 <attribute name="NAME" x="27.94" y="134.62" size="1.27" layer="95"/>
 <attribute name="VALUE" x="27.94" y="132.08" size="1.27" layer="96"/>
-<attribute name="PACKAGE" x="27.94" y="129.54" size="1.27" layer="96"/>
 </instance>
 <instance part="C2" gate="G$1" x="55.88" y="152.4" smashed="yes" rot="MR180">
-<attribute name="NAME" x="60.96" y="152.4" size="1.27" layer="95"/>
-<attribute name="VALUE" x="60.96" y="149.86" size="1.27" layer="96"/>
-<attribute name="PACKAGE" x="60.96" y="147.32" size="1.27" layer="96"/>
+<attribute name="NAME" x="58.42" y="152.4" size="1.27" layer="95"/>
+<attribute name="VALUE" x="58.42" y="149.86" size="1.27" layer="96"/>
 </instance>
 <instance part="C3" gate="G$1" x="43.18" y="132.08" smashed="yes" rot="MR180">
-<attribute name="NAME" x="48.26" y="129.54" size="1.27" layer="95"/>
-<attribute name="VALUE" x="48.26" y="127" size="1.27" layer="96"/>
-<attribute name="PACKAGE" x="48.26" y="124.46" size="1.27" layer="96"/>
+<attribute name="NAME" x="45.72" y="132.08" size="1.27" layer="95"/>
+<attribute name="VALUE" x="45.72" y="129.54" size="1.27" layer="96"/>
 </instance>
 <instance part="C4" gate="G$1" x="63.5" y="132.08" smashed="yes" rot="MR180">
-<attribute name="NAME" x="68.58" y="129.54" size="1.27" layer="95"/>
-<attribute name="VALUE" x="68.58" y="127" size="1.27" layer="96"/>
-<attribute name="PACKAGE" x="68.58" y="124.46" size="1.27" layer="96"/>
+<attribute name="NAME" x="66.04" y="132.08" size="1.27" layer="95"/>
+<attribute name="VALUE" x="66.04" y="129.54" size="1.27" layer="96"/>
 </instance>
 <instance part="+3V4" gate="G$1" x="208.28" y="55.88" smashed="yes">
 <attribute name="VALUE" x="210.82" y="53.34" size="1.27" layer="96"/>
@@ -4235,7 +4255,7 @@ header for Leonardo compatibility.</text>
 <instance part="U$15" gate="G$1" x="76.2" y="121.92"/>
 <instance part="U$16" gate="G$1" x="63.5" y="121.92"/>
 <instance part="U$17" gate="G$1" x="43.18" y="121.92"/>
-<instance part="J8" gate="G$1" x="231.14" y="88.9" smashed="yes" rot="R180">
+<instance part="J7" gate="G$1" x="231.14" y="88.9" smashed="yes" rot="R180">
 <attribute name="VALUE" x="226.06" y="93.98" size="1.27" layer="96"/>
 <attribute name="NAME" x="226.06" y="96.52" size="1.27" layer="95"/>
 </instance>
@@ -4266,28 +4286,24 @@ header for Leonardo compatibility.</text>
 <attribute name="VALUE" x="129.54" y="35.56" size="1.27" layer="96"/>
 </instance>
 <instance part="C9" gate="G$1" x="182.88" y="40.64" smashed="yes" rot="R180">
-<attribute name="NAME" x="187.96" y="40.64" size="1.27" layer="95"/>
-<attribute name="VALUE" x="187.96" y="38.1" size="1.27" layer="96"/>
-<attribute name="PACKAGE" x="187.96" y="35.56" size="1.27" layer="96"/>
+<attribute name="NAME" x="185.42" y="38.1" size="1.27" layer="95"/>
+<attribute name="VALUE" x="185.42" y="35.56" size="1.27" layer="96"/>
 </instance>
 <instance part="C10" gate="G$1" x="208.28" y="40.64" smashed="yes" rot="R180">
-<attribute name="NAME" x="198.12" y="40.64" size="1.27" layer="95"/>
-<attribute name="VALUE" x="198.12" y="38.1" size="1.27" layer="96"/>
-<attribute name="PACKAGE" x="198.12" y="35.56" size="1.27" layer="96"/>
+<attribute name="NAME" x="198.12" y="38.1" size="1.27" layer="95"/>
+<attribute name="VALUE" x="198.12" y="35.56" size="1.27" layer="96"/>
 </instance>
 <instance part="U$9" gate="G$1" x="182.88" y="27.94"/>
 <instance part="U$18" gate="G$1" x="208.28" y="27.94"/>
 <instance part="U$19" gate="G$1" x="215.9" y="27.94"/>
 <instance part="R5" gate="G$1" x="223.52" y="50.8" smashed="yes" rot="MR0">
-<attribute name="NAME" x="218.44" y="58.42" size="1.27" layer="95"/>
-<attribute name="VALUE" x="218.44" y="55.88" size="1.27" layer="96"/>
-<attribute name="PACKAGE" x="218.44" y="53.34" size="1.27" layer="96"/>
+<attribute name="NAME" x="220.98" y="55.88" size="1.27" layer="95"/>
+<attribute name="VALUE" x="220.98" y="53.34" size="1.27" layer="96"/>
 </instance>
 <instance part="U$20" gate="G$1" x="231.14" y="27.94"/>
 <instance part="R3" gate="G$1" x="96.52" y="99.06" smashed="yes" rot="MR0">
-<attribute name="NAME" x="93.98" y="106.68" size="1.27" layer="95"/>
-<attribute name="VALUE" x="93.98" y="104.14" size="1.27" layer="96"/>
-<attribute name="PACKAGE" x="93.98" y="101.6" size="1.27" layer="96"/>
+<attribute name="NAME" x="93.98" y="104.14" size="1.27" layer="95"/>
+<attribute name="VALUE" x="91.44" y="101.6" size="1.27" layer="96"/>
 </instance>
 <instance part="+3V6" gate="G$1" x="104.14" y="104.14" smashed="yes">
 <attribute name="VALUE" x="104.14" y="106.68" size="1.27" layer="96"/>
@@ -4295,14 +4311,11 @@ header for Leonardo compatibility.</text>
 <instance part="LED1" gate="G$1" x="114.3" y="152.4" smashed="yes">
 <attribute name="NAME" x="116.84" y="154.94" size="1.27" layer="95"/>
 <attribute name="VALUE" x="116.84" y="152.4" size="1.27" layer="96"/>
-<attribute name="COLOUR" x="116.84" y="149.86" size="1.27" layer="96"/>
-<attribute name="PACKAGE" x="116.84" y="147.32" size="1.27" layer="96"/>
 </instance>
 <instance part="U$21" gate="G$1" x="114.3" y="121.92"/>
 <instance part="R2" gate="G$1" x="106.68" y="132.08" smashed="yes" rot="MR270">
 <attribute name="NAME" x="96.52" y="134.62" size="1.27" layer="95"/>
-<attribute name="VALUE" x="96.52" y="132.08" size="1.27" layer="96"/>
-<attribute name="PACKAGE" x="96.52" y="129.54" size="1.27" layer="96"/>
+<attribute name="VALUE" x="93.98" y="132.08" size="1.27" layer="96"/>
 </instance>
 <instance part="U$22" gate="G$1" x="106.68" y="121.92"/>
 <instance part="+3V7" gate="G$1" x="114.3" y="172.72" smashed="yes">
@@ -4311,9 +4324,8 @@ header for Leonardo compatibility.</text>
 <instance part="R1" gate="G$1" x="114.3" y="162.56" smashed="yes" rot="MR270">
 <attribute name="NAME" x="116.84" y="165.1" size="1.27" layer="95"/>
 <attribute name="VALUE" x="116.84" y="162.56" size="1.27" layer="96"/>
-<attribute name="PACKAGE" x="116.84" y="160.02" size="1.27" layer="96"/>
 </instance>
-<instance part="J3" gate="G$1" x="187.96" y="139.7"/>
+<instance part="J3" gate="G$1" x="187.96" y="139.7" smashed="yes"/>
 <instance part="U$37" gate="G$1" x="208.28" y="101.6" rot="MR0"/>
 <instance part="U$38" gate="G$1" x="170.18" y="111.76" rot="MR0"/>
 <instance part="J5" gate="G$1" x="233.68" y="127" smashed="yes" rot="R180">
@@ -4342,23 +4354,11 @@ header for Leonardo compatibility.</text>
 <attribute name="VALUE" x="228.6" y="106.68" size="1.27" layer="96"/>
 </instance>
 <instance part="U$45" gate="G$1" x="228.6" y="172.72"/>
-<instance part="J7" gate="G$1" x="154.94" y="91.44" smashed="yes">
-<attribute name="NAME" x="152.4" y="96.52" size="1.27" layer="95"/>
-<attribute name="VALUE" x="152.4" y="93.98" size="1.27" layer="96"/>
-</instance>
-<instance part="J10" gate="G$1" x="208.28" y="76.2" smashed="yes">
-<attribute name="NAME" x="205.74" y="81.28" size="1.27" layer="95"/>
-<attribute name="VALUE" x="205.74" y="78.74" size="1.27" layer="96"/>
-</instance>
-<instance part="J9" gate="G$1" x="154.94" y="76.2" smashed="yes">
-<attribute name="NAME" x="152.4" y="81.28" size="1.27" layer="95"/>
-<attribute name="VALUE" x="152.4" y="78.74" size="1.27" layer="96"/>
-</instance>
-<instance part="J11" gate="G$1" x="154.94" y="60.96" smashed="yes">
+<instance part="J8" gate="G$1" x="154.94" y="60.96" smashed="yes">
 <attribute name="NAME" x="152.4" y="66.04" size="1.27" layer="95"/>
 <attribute name="VALUE" x="152.4" y="63.5" size="1.27" layer="96"/>
 </instance>
-<instance part="J12" gate="G$1" x="154.94" y="45.72" smashed="yes">
+<instance part="J9" gate="G$1" x="154.94" y="45.72" smashed="yes">
 <attribute name="NAME" x="152.4" y="50.8" size="1.27" layer="95"/>
 <attribute name="VALUE" x="152.4" y="48.26" size="1.27" layer="96"/>
 </instance>
@@ -4719,7 +4719,7 @@ header for Leonardo compatibility.</text>
 <label x="81.28" y="40.894" size="1.27" layer="95"/>
 </segment>
 <segment>
-<pinref part="J8" gate="G$1" pin="2"/>
+<pinref part="J7" gate="G$1" pin="2"/>
 <wire x1="223.52" y1="86.36" x2="215.9" y2="86.36" width="0.1524" layer="91"/>
 <label x="218.44" y="86.614" size="1.27" layer="95"/>
 </segment>
@@ -4760,7 +4760,7 @@ header for Leonardo compatibility.</text>
 <label x="96.52" y="61.214" size="1.27" layer="95"/>
 </segment>
 <segment>
-<pinref part="J8" gate="G$1" pin="1"/>
+<pinref part="J7" gate="G$1" pin="1"/>
 <wire x1="223.52" y1="88.9" x2="215.9" y2="88.9" width="0.1524" layer="91"/>
 <label x="218.44" y="89.154" size="1.27" layer="95"/>
 </segment>
@@ -4907,9 +4907,9 @@ header for Leonardo compatibility.</text>
 <label x="208.28" y="170.434" size="1.27" layer="95"/>
 </segment>
 <segment>
-<pinref part="J10" gate="G$1" pin="2"/>
-<wire x1="210.82" y1="76.2" x2="223.52" y2="76.2" width="0.1524" layer="91"/>
 <label x="213.36" y="76.454" size="1.27" layer="95"/>
+<pinref part="IC2" gate="A" pin="O"/>
+<wire x1="223.52" y1="76.2" x2="203.2" y2="76.2" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="MOSI_5V" class="0">
@@ -4919,9 +4919,9 @@ header for Leonardo compatibility.</text>
 <label x="208.28" y="162.814" size="1.27" layer="95"/>
 </segment>
 <segment>
-<pinref part="J7" gate="G$1" pin="2"/>
-<wire x1="157.48" y1="91.44" x2="167.64" y2="91.44" width="0.1524" layer="91"/>
-<label x="160.02" y="91.694" size="1.27" layer="95"/>
+<label x="157.48" y="91.694" size="1.27" layer="95"/>
+<pinref part="IC2" gate="B" pin="I"/>
+<wire x1="165.1" y1="91.44" x2="149.86" y2="91.44" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SCK_5V" class="0">
@@ -4931,23 +4931,21 @@ header for Leonardo compatibility.</text>
 <label x="208.28" y="165.354" size="1.27" layer="95"/>
 </segment>
 <segment>
-<pinref part="J9" gate="G$1" pin="2"/>
-<wire x1="157.48" y1="76.2" x2="167.64" y2="76.2" width="0.1524" layer="91"/>
-<label x="160.02" y="76.454" size="1.27" layer="95"/>
+<label x="157.48" y="76.454" size="1.27" layer="95"/>
+<pinref part="IC2" gate="C" pin="I"/>
+<wire x1="165.1" y1="76.2" x2="149.86" y2="76.2" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="C" class="0">
 <segment>
 <pinref part="IC2" gate="D" pin="I"/>
-<wire x1="149.86" y1="60.96" x2="152.4" y2="60.96" width="0.1524" layer="91"/>
-<pinref part="J11" gate="G$1" pin="1"/>
+<pinref part="J8" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="D" class="0">
 <segment>
 <pinref part="IC2" gate="E" pin="I"/>
-<wire x1="149.86" y1="45.72" x2="152.4" y2="45.72" width="0.1524" layer="91"/>
-<pinref part="J12" gate="G$1" pin="1"/>
+<pinref part="J9" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="!RESET_5V" class="0">
@@ -5198,31 +5196,10 @@ header for Leonardo compatibility.</text>
 <pinref part="J6" gate="G$1" pin="2"/>
 </segment>
 </net>
-<net name="A" class="0">
-<segment>
-<pinref part="IC2" gate="B" pin="I"/>
-<wire x1="149.86" y1="91.44" x2="152.4" y2="91.44" width="0.1524" layer="91"/>
-<pinref part="J7" gate="G$1" pin="1"/>
-</segment>
-</net>
-<net name="B" class="0">
-<segment>
-<pinref part="IC2" gate="C" pin="I"/>
-<wire x1="149.86" y1="76.2" x2="152.4" y2="76.2" width="0.1524" layer="91"/>
-<pinref part="J9" gate="G$1" pin="1"/>
-</segment>
-</net>
-<net name="N$18" class="0">
-<segment>
-<pinref part="IC2" gate="A" pin="O"/>
-<wire x1="205.74" y1="76.2" x2="203.2" y2="76.2" width="0.1524" layer="91"/>
-<pinref part="J10" gate="G$1" pin="1"/>
-</segment>
-</net>
 <net name="D3" class="0">
 <segment>
-<pinref part="J12" gate="G$1" pin="2"/>
-<wire x1="157.48" y1="45.72" x2="165.1" y2="45.72" width="0.1524" layer="91"/>
+<pinref part="J9" gate="G$1" pin="2"/>
+<wire x1="160.02" y1="45.72" x2="165.1" y2="45.72" width="0.1524" layer="91"/>
 <label x="160.02" y="45.974" size="1.27" layer="95"/>
 </segment>
 <segment>
@@ -5236,8 +5213,8 @@ header for Leonardo compatibility.</text>
 </net>
 <net name="D2" class="0">
 <segment>
-<pinref part="J11" gate="G$1" pin="2"/>
-<wire x1="157.48" y1="60.96" x2="165.1" y2="60.96" width="0.1524" layer="91"/>
+<pinref part="J8" gate="G$1" pin="2"/>
+<wire x1="160.02" y1="60.96" x2="165.1" y2="60.96" width="0.1524" layer="91"/>
 <label x="160.02" y="61.214" size="1.27" layer="95"/>
 </segment>
 <segment>
